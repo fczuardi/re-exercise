@@ -1,0 +1,23 @@
+{
+  "name": "re-exercise",
+  "version": "0.1.0",
+  "description": "Programming exercises from various places and some solutions for them in ReasonML",
+  "main": "src/index.js",
+  "repository": "git@github.com:fczuardi/re-exercise.git",
+  "author": "Fabricio C Zuardi <fabricio@fabricio.org>",
+  "license": "AGPL-3.0",
+  "private": false,
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "test": "jest"
+  },
+  "jest": {
+    "testRegex": "/__tests__/.*\\.js"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.3",
+    "bs-platform": "^4.0.5",
+    "jest": "^23.5.0"
+  }
+}

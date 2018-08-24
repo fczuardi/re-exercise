@@ -1,0 +1,10 @@
+# node
+node_modules
+yarn-error.log
+
+# reason
+.merlin
+/lib/*
+!/lib/js/*
+.bsb.lock
+*.bs.js
