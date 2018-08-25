@@ -10,7 +10,8 @@ let solution1 = n => {
   let stringToDigitsArray = s =>
     Array.init(String.length(s), String.get(s)) |> Array.map(charToInt);
 
-  let multiplyDigits = Array.fold_left((a, b) => a * b, 1);
+  /* operator * is a function that takes 2 ints and returns an int */
+  let multiplyDigits = Array.fold_left(( * ), 1);
 
   let rec persistence = (n, count) =>
     switch (n) {
