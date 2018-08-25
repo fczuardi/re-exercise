@@ -12,16 +12,14 @@ let solution1 = n => {
 
   let multiplyDigits = Array.fold_left((a, b) => a * b, 1);
 
-  let rec persistence = (n, count) => {
-    let s = string_of_int(n);
-    switch (String.length(s)) {
-    | 1 => count
-    | n =>
-      let digitsArray = stringToDigitsArray(s);
-      let multiplied = multiplyDigits(digitsArray);
+  let rec persistence = (n, count) =>
+    switch (n) {
+    | n when n < 10 => count
+    | _ =>
+      let multiplied =
+        string_of_int(n) |> stringToDigitsArray |> multiplyDigits;
       persistence(multiplied, count + 1);
     };
-  };
 
   persistence(n, 0);
 };
